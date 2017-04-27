@@ -1,0 +1,81 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<style>
+tr.total {
+  border-top: solid 2px black;
+  font-weight: bold;
+}
+tr.total td:first-child {
+  text-align: right;
+}
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+pre {
+  font-size: 0.75rem;
+}
+h5 {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="theproblem">The Problem</h4>
+<p>Using the same Quadtree data structure that you used as part of MP5, implement
+the following function in <code>quadtree.cpp</code>:</p>
+<pre><code>int Quadtree::tallyDeviants(RGBApixel const &amp; target,
+              QuadtreeNode const * curNode, int tolerance) const;
+</code></pre>
+<p><code>tallyDeviants</code> must calculate the number of leaves in the tree rooted at
+<code>curNode</code> with element <strong>more than</strong> <code>tolerance</code> distance from target.  You
+can assume that you are working on a perfect (unpruned), non-empty Quadtree.</p>
+<h4 id="testing">Testing</h4>
+<p>A <code>Makefile</code> has been provided that compiles a simple testing suite provided
+in <code>main.cpp</code>.  To run:</p>
+<pre><code>make
+./main
+</code></pre>
+  </div>
+
+  <hr>
+  <h4>&quot;Isomorphic Strings&quot; Feedback</h4>
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="theproblem">The Problem</h4>
+<p>Implement the following function in <code>main-p1.cpp</code>, which returns <code>true</code>
+if the two input strings are isomorphic:</p>
+<pre><code>bool isIsomorphic(string s1, string s2);
+</code></pre>
+<p>Two strings are isomorphic if there exists a one-to-one correspondence (bijection)
+of characters in <code>s</code> that translates <code>s</code> to <code>t</code>.  </p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><code>egg</code> and <code>add</code> are isomorphic (<code>e</code> &rarr; <code>a</code> and <code>g</code> &rarr; <code>d</code>)</li>
+<li><code>foo</code> and <code>bar</code> are <strong>not</strong> isomorphic (<code>o</code> cannot map to both <code>a</code> and <code>r</code>)</li>
+<li><code>paper</code> and <code>title</code> are isomorphic (<code>p</code> &rarr; <code>t</code>, <code>a</code> &rarr; <code>i</code>, <code>e</code> &rarr; <code>l</code>, and <code>r</code> &rarr; <code>e</code>)</li>
+<li><code>move</code> and <code>hood</code> are <strong>not</strong> isomorphic (<code>o</code> and <code>v</code> cannot both map to <code>o</code>)</li>
+<li><code>boo</code> and <code>boo</code> are isomorphic (characters can map to themselves)</li>
+</ul>
+<h4 id="potentiallyusefulreferences">Potentially Useful References</h4>
+<ul>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/vector.html">stl::vector documentation</a></li>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/map.html">stl::map documentation</a></li>
+</ul>
+<h4 id="testing">Testing</h4>
+<p>A <code>Makefile</code> has been provided that compiles a simple testing suite provided
+in <code>main-p1.cpp</code>.  To run:</p>
+<pre><code>make
+./main
+</code></pre>
+  </div>
+</div>
+</body>
+</html>

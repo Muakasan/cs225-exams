@@ -1,0 +1,72 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<style>
+tr.total {
+  border-top: solid 2px black;
+  font-weight: bold;
+}
+tr.total td:first-child {
+  text-align: right;
+}
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+pre {
+  font-size: 0.75rem;
+}
+h5 {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<hr>
+
+  <h4>&quot;Transformation to a Binary Tree&quot; Feedback</h4>
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="algorithmoverview">Algorithm Overview</h4>
+<p>Trees with more than two child nodes can be transformed to a binary tree using a
+clever (but simple) algorithm.  For every node in the non-binary tree, the
+binary tree transformation is as follows:</p>
+<ul>
+<li>The left child of the node as a binary tree is the first child of the node in the original tree</li>
+<li>The right child of the node as a binary tree is the next order-level sibling of the node in the original tree</li>
+</ul>
+<h4 id="algorithmexample">Algorithm Example</h4>
+<p>Consider the following non-binary tree:</p>
+<p><img src="file/3tree_3layout.png"></p>
+<p>Transforming the tree to a binary tree results in the following edges:</p>
+<p><img src="file/3tree_2layout.png"></p>
+<p>Equivalently, the tree can be drawn in a format that is standard for drawing binary tree:</p>
+<p><img src="file/2tree_2layout.png">
+<img src="file/2tree_3layout.png"></p>
+<p><em>Even though a 3-tree is shown here, this algorithm works for any n-tree.</em></p>
+<h4 id="coding">Coding</h4>
+<p>Implement the <code>transformToBinary</code> member function of the <code>Tree</code> class in <code>tree.cpp</code>.</p>
+<p>When <code>transformToBinary</code> is called, the <code>Tree</code> is an n-tree where <code>TreeNode</code>'s
+child nodes are stored in the vector <code>children</code>.  When the function returns,
+each <code>TreeNode</code> must have their <code>left</code> and <code>right</code> pointers set that creates
+the binary tree described above.</p>
+<p>Feel free to add any helper functions to <code>tree.cpp</code> and <code>tree.h</code>.</p>
+<h4 id="potentiallyusefulreferences">Potentially Useful References</h4>
+<ul>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/vector.html">stl::vector documentation</a></li>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/stack.html">stl::stack documentation</a></li>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/queue.html">stl::queue documentation</a></li>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/map.html">stl::map documentation</a></li>
+</ul>
+<h4 id="testing">Testing</h4>
+<p>A <code>Makefile</code> has been provided that compiles a simple testing suite provided
+in <code>main.cpp</code>.  To run:</p>
+<pre><code>make
+./main
+</code></pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<style>
+tr.total {
+  border-top: solid 2px black;
+  font-weight: bold;
+}
+tr.total td:first-child {
+  text-align: right;
+}
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+pre {
+  font-size: 0.75rem;
+}
+h5 {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<hr>
+
+  <h4>&quot;Finding the sum of nodes in a binary tree&quot; Feedback</h4>
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="theproblem">The Problem</h4>
+<p>In the <code>BinaryTree</code> class in <code>binarytree.cpp</code>, complete the member
+function <code>sumNodes()</code> that returns the sum of the <code>elem</code> of every node
+in the binary tree.</p>
+<p>Feel free to write any helper functions that you may need within the <code>BinaryTree</code>
+class.  However, you must not modify the parameters of the functions provided.</p>
+<p><em>The <code>BinaryTree</code> class used here is the same <code>BinaryTree</code> class used in lab_trees,
+with functions that are not used removed for simplicity.</em></p>
+<h4 id="examples">Examples</h4>
+<pre><code>  4       &lt;-- sumNodes() returns 10,
+ / \            since 4 + 3 + 3 = 10
+3   3
+</code></pre>
+<pre><code>  1        &lt;-- sumNodes() returns 12,
+ / \             since 1 + 6 + 2 + 3 = 12
+6   2
+     \
+      3
+</code></pre>
+<h4 id="compileandtest">Compile and Test</h4>
+<p>A complete Makefile and a <code>main.cpp</code> file containing some simple tests have
+been provided for you.  To compile and run the simple tests, run:</p>
+<pre><code>make
+./binarytree-test
+</code></pre>
+  </div>
+  <hr>
+  <h4>&quot;Game Night Leaders&quot; Feedback</h4>
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="thesetup">The Setup</h4>
+<p>Consider a game night for students.  When a student arrives to the game night,
+at random they may be designated as a leader.  For example:</p>
+<ul>
+<li>Alice arrives, not a leader</li>
+<li>Bob arrives, leader</li>
+<li>Carol arrives, leader</li>
+<li>Don arrives, not a leader</li>
+<li>Erin arrives, not a leader</li>
+</ul>
+<h4 id="theproblem">The Problem</h4>
+<p>In the <code>GameNight</code> class in <code>gamenight.cpp</code>, complete the following member
+functions:</p>
+<ul>
+<li><p><code>void arrival(Person *p)</code>, adds a <code>Person</code> to the game night</p></li>
+<li><p><code>Person *getLeader()</code>, removes and returns a <code>Person</code>, who is a leader, from
+the game night or <code>NULL</code> if no such person exists</p></li>
+<li><p><code>Person *getNonLeader()</code>, removes and returns a <code>Person</code>, who is <strong>not</strong> a leader,
+from the game night or <code>NULL</code> if no such person exists</p></li>
+</ul>
+<p>When removing and returning a <code>Person</code>, the person being returned <strong>must</strong> be
+the person who arrived <strong>most recent</strong>.</p>
+<h4 id="example">Example</h4>
+<p>Continuing the example started in "The Setup", the member functions will be
+called with pointers to <code>Person</code> classes in the order that the students arrive:</p>
+<ul>
+<li><code>arrival( alice )   // alice, non-leader arrived</code></li>
+<li><code>arrival( bob )     // bob, leader arrived</code></li>
+<li><code>arrival( carol )   // carol, leader arrived</code></li>
+<li><code>arrival( don )     // don, non-leader arrived</code></li>
+<li><code>arrival( erin )    // erin, non-leader arrived</code></li>
+</ul>
+<p>After all students arrived, various calls may be made to <code>getLeader()</code> and
+<code>getNonLeader()</code>.  For example:</p>
+<ul>
+<li><code>getLeader()     // returns a pointer to Carol, this most recent arriving leader</code></li>
+<li><code>getLeader()     // returns a pointer to Bob, the next most recent arriving leader</code></li>
+<li><code>getNonLeader()  // returns a pointer to Erin, the most recent arriving non-leader</code></li>
+<li><code>getLeader()     // returns NULL, as no more leaders exist</code></li>
+<li><code>getNonLeader()  // returns a pointer to Don, the next most recent arriving non-leader</code></li>
+</ul>
+<h4 id="reference">Reference</h4>
+<p>The <code>Person</code> class contains a member function <code>isLeader()</code> that returns <code>true</code>
+if the person is a leader and <code>false</code> otherwise.</p>
+<p>In writing your functions, you may want to make use to <code>queue</code> or <code>stack</code> from
+the standard template library (stl).  You can find the documentation to these
+stl classes here:</p>
+<ul>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/stack.html">stl::stack documentation</a></li>
+<li><a href="https://prairielearn.engr.illinois.edu/pl/course_instance/470/clientFilesCourse/cpp-reference/en/cpp/container/queue.html">stl::queue documentation</a></li>
+</ul>
+<h4 id="compileandtest">Compile and Test</h4>
+<p>A complete Makefile and tester code is provided for you.  To compile and test,
+run:</p>
+<pre><code>make
+./gamenight-test
+</code></pre>
+  </div>
+</div>
+</body>
+</html>

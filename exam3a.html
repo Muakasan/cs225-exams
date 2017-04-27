@@ -1,0 +1,100 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+<style>
+tr.total {
+  border-top: solid 2px black;
+  font-weight: bold;
+}
+tr.total td:first-child {
+  text-align: right;
+}
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+pre {
+  font-size: 0.75rem;
+}
+h5 {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<hr>
+
+  <h4>&quot;Adopting an Animal&quot; Feedback</h4>
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="thesetup">The Setup</h4>
+<p>Consider an animal shelter that contains two types of animals: dogs and cats.
+A dog is represented by the <code>Dog</code> class, a cat is represented by a <code>Cat</code> class,
+and both classes inherit the <code>Animal</code> class.</p>
+<p>The animal shelter maintains a singly list of all the animals (nodes
+with an <code>Animal *</code> pointer that points to the <code>Animal</code>).  When you want to adopt
+an animal from this shelter, you let them know your preference for a dog,
+cat, or either.</p>
+<p>Based on your preference, you adopt the animal closest to the head of the
+list that matches your preference.</p>
+<h4 id="theproblem">The Problem</h4>
+<p>In the <code>List</code> class, complete the <code>adoptCat</code>, <code>adoptDog</code>, and <code>adoptAny</code> member function in <code>list.cpp</code>.
+Each of these functions must:</p>
+<ol>
+<li>find the animal closest to the head of the list that meets the function preferences (if a suitable animal exists),</li>
+<li>remove that node from the list, and</li>
+<li>return a pointer to the <code>Animal</code> (if a suitable animal was found) <strong>or</strong> <code>NULL</code> if no animal was found</li>
+</ol>
+<h4 id="reference">Reference</h4>
+<p>The <code>List</code> class (<code>list.cpp</code>, <code>list.h</code>) stores a singly linked list of <code>ListNode</code>
+nodes, using the same structure and variable names as MP3.</p>
+<p>The <code>Animal</code> class has a member function <code>getType()</code> that will return <code>"Dog"</code> or <code>"Cat"</code> based
+on the type of animal.</p>
+<h4 id="compileandtest">Compile and Test</h4>
+<p>A complete Makefile and tester code is provided for you.  To compile and test,
+run:</p>
+<pre><code>make
+./animal-test
+</code></pre>
+  </div>
+  </div>
+  <hr>
+  <div class="container">
+  <h4>&quot;Game Night Leaders&quot; Feedback</h4>
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="thesetup">The Setup</h4>
+<p>Consider a game night for students, where each student is added to a end of a
+linked list in the order they arrive to the game night.  To help organize the
+games, every 4th student is a leader.  For example:</p>
+<pre><code>1st     -&gt;  2nd  -&gt;  3rd   -&gt;  4th  -&gt; 5th     -&gt; 6th    -&gt;  ...
+Alice   -&gt;  Bob  -&gt;  Carol -&gt;  Don  -&gt; Erin    -&gt; Faythe -&gt;  ...
+[Leader]                               [Leader]
+</code></pre>
+<h4 id="theproblem">The Problem</h4>
+<p>In the <code>List</code> class, complete the <code>reorganizeList</code> member function in <code>list-p2.cpp</code>.
+The <code>reorganizeList</code> function must place all non-leaders at the front of the list
+followed by all leaders, while otherwise maintaining the same order.</p>
+<p>Using the example above, the new list must be the following:</p>
+<pre><code>2nd  -&gt;  3rd   -&gt;  4th  -&gt; 6th    -&gt; 1st     -&gt; 5th     -&gt;  ...
+Bob  -&gt;  Carol -&gt;  Don  -&gt; Faythe -&gt; Alice   -&gt; Erin    -&gt;  ...
+                                     [Leader]   [Leader]
+</code></pre>
+<h4 id="reference">Reference</h4>
+<p>The <code>List</code> class (<code>list-p2.cpp</code>, <code>list.h</code>) stores a singly linked list of <code>ListNode</code>
+nodes, using the same structure and variable names as MP3.</p>
+<p>The <code>ListNode</code> class contains a <code>bool leader</code> that will be set to <code>true</code> when
+that entry contains a leader.</p>
+<h4 id="compileandtest">Compile and Test</h4>
+<p>A complete Makefile and tester code is provided for you.  To compile and test,
+run:</p>
+<pre><code>make
+./gameNight-test
+</code></pre>
+  </div>
+</body>
+</html>
