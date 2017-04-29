@@ -61,7 +61,43 @@ run:</p>
 ./animal-test
 </code></pre>
   </div>
+
+<hr>
+
+  <h4>&quot;Meat and Veggies&quot; Feedback</h4>
+
+  <h5>Question Text</h5>
+  <div style="border: solid 1px black; padding: 10px;">
+    <h4 id="thesetup">The Setup</h4>
+<p>Consider a eatery where meals are brought out one-by-one (similar to dim sum,
+except each cart only has a single meal).  Each meal is represented by the
+class <code>Meal</code> and a pointer to each meal, a <code>Meal *</code>, is stored within a node
+of a singly linked list.</p>
+<p>Some meals contains only meat, some contain only vegetables, and some contain
+both meat and vegetables.  Each diner will select the first meal that matches
+their eating preference.</p>
+<h4 id="theproblem">The Problem</h4>
+<p>In the <code>List</code> class, complete the <code>chooseMeal</code> member function in <code>list.cpp</code>.
+The <code>chooseMeal</code> function must:</p>
+<ol>
+<li>find the meal closest to the head of the list that meets the given
+preferences (if a suitable meal exists),</li>
+<li>remove the node containing the meal from the list, and</li>
+<li>return a pointer to the meal (if a suitable meal was found) <strong>or</strong> <code>NULL</code> if no meal was found</li>
+</ol>
+<h4 id="reference">Reference</h4>
+<p>The <code>List</code> class (<code>list.cpp</code>, <code>list.h</code>) stores a singly linked list of <code>ListNode</code>
+nodes, using the same structure and variable names as MP3.</p>
+<p>The <code>Meal</code> class has a member functions <code>containsMeat()</code> and <code>containsVegetables()</code>
+that returned a <code>bool</code> based on if the meal contains meat and/or vegetables.</p>
+<h4 id="compileandtest">Compile and Test</h4>
+<p>A complete Makefile and tester code is provided for you.  To compile and test,
+run:</p>
+<pre><code>make
+./eatery-test
+</code></pre>
   </div>
+
   <hr>
   <div class="container">
   <h4>&quot;Game Night Leaders&quot; Feedback</h4>
